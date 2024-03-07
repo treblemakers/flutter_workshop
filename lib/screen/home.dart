@@ -26,6 +26,12 @@ class HomeRoute extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
+                  context.router.replaceNamed('/example');
+                },
+                child: Text("Example"),
+              ),
+              ElevatedButton(
+                onPressed: () {
                   MyApp.setLocale(context, Locale('th'));
                 },
                 child: Text(AppLocalizations.of(context)!.change_thai),
